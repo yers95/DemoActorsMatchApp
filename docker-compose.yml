@@ -4,15 +4,15 @@ services:
  
   postgre-sql:
     image: postgres:latest
+    restart: always
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     environment:
       - POSTGRES_USER=dockerUser
       - POSTGRES_PASSWORD=dockerPostgresPassword
       - POSTGRES_DB=actorsDb
     ports:
-      - "127.0.0.1:6543:5432"
-    restart: always
-    volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - "127.0.0.1:6542:5432"
 
   api:
     build: .

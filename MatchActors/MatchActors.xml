@@ -4,11 +4,51 @@
         <name>MatchActors</name>
     </assembly>
     <members>
-        <member name="M:MatchActors.Controllers.ActorMatchingsController.GetActorByName(System.String)">
+        <member name="T:MatchActors.Contracts.MatchActorsRequest">
             <summary>
-            Получение автора по имени
+            Request to get matched filmings of two actors
             </summary>
-            <returns></returns>
+        </member>
+        <member name="P:MatchActors.Contracts.MatchActorsRequest.FirstActorName">
+            <summary>
+            First actor name
+            </summary>
+        </member>
+        <member name="P:MatchActors.Contracts.MatchActorsRequest.SecondActorName">
+            <summary>
+            Second actor name
+            </summary>
+        </member>
+        <member name="P:MatchActors.Contracts.MatchActorsRequest.MoviesOnly">
+            <summary>
+            GetMoviesOnlyFlag
+            </summary>
+        </member>
+        <member name="T:MatchActors.Contracts.MatchActorsResponse">
+            <summary>
+            Result of matching actors filmings
+            </summary>
+        </member>
+        <member name="P:MatchActors.Contracts.MatchActorsResponse.Filmings">
+            <summary>
+            Matched filmings list
+            </summary>
+        </member>
+        <member name="M:MatchActors.Controllers.ActorMatchingsController.FindMatchedFilmings(MatchActors.Contracts.MatchActorsRequest,System.Threading.CancellationToken)">
+            <summary>
+            Get actors matched filmings
+            </summary>
+            <remarks>
+            Sample value of actor
+            
+                POST /ActorMatchings
+                {
+                   "firstActorName": "Chris Hemsworth",
+                   "secondActorName": "Natalie Portman",
+                   "moviesOnly": true
+                }
+                
+            </remarks>
         </member>
     </members>
 </doc>
