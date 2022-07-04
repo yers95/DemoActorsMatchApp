@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MatchActors</name>
+    </assembly>
+    <members>
+        <member name="M:MatchActors.Controllers.ActorMatchingsController.GetActorByName(System.String)">
+            <summary>
+            Получение автора по имени
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
